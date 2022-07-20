@@ -33,6 +33,7 @@ typedef struct formats
 
 int _printf(const char *format, ...);
 char *func_char(va_list ap);
+char *func_string(va_list ap);
 char *(*get_op_func(char s))(va_list);
 
 #endif /* PRINTF_H */

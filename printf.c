@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <string.h>
 
 /**
  * _printf - Function that produces output
@@ -13,7 +14,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0;
+	int len, j, i = 0;
 	char *(*ptr)(va_list);
 	char *res;
 	string_to_print stringf;
@@ -28,8 +29,13 @@ int _printf(const char *format, ...)
 		{
 			ptr = get_op_func(format[i + 1]);
 			res = ptr(ap);
-			stringf.buffer[stringf.counter] = res[0];
-			stringf.counter++;
+			len = strlen(res);
+			for (j = 0; j < len; j++)
+			{
+				stringf.buffer[stringf.counter] = res[j];
+				stringf.counter++;
+			}
+			free(res);
 			i++;
 		}
 		else
