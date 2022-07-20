@@ -11,10 +11,9 @@ int main(void)
 {
     int len;
     int len2;
-    char *ws = "hello";
 
-    len = _printf("Let's try to printf  %s a simple sentence.\n", ws);
-    len2 = printf("Let's try to printf  %s a simple sentence.\n", ws);
+    len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+    len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
 
     printf("%d\n", len);
     printf("%d\n", len2);

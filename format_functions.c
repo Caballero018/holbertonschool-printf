@@ -34,6 +34,10 @@ char *func_string(va_list ap)
 	char *s, *ptr;
 
 	s = va_arg(ap, char *);
+
+	if (s == NULL)
+		s = "(null)";
+
 	ptr = malloc(sizeof(char) * strlen(s));
 
 	if (ptr == NULL)
