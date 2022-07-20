@@ -11,9 +11,9 @@ int main(void)
 {
     int len;
     int len2;
-
-    len = _printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
-    len2 = printf("Complete the sentence: You %s nothing, Jon Snow.\n", (char *)0);
+    
+    len = _printf("Should print a single percent sign: %%\n");
+    len2 = _printf("Should print a single percent sign: %%\n");
 
     printf("%d\n", len);
     printf("%d\n", len2);

@@ -51,3 +51,25 @@ char *func_string(va_list ap)
 
 	return (ptr);
 }
+
+
+/**
+ 25  * func_percent - Expands a character specification with
+ 26  * a percent value.
+ 27  * @ap: The list of variadic arguments.
+ 28  * Return: A pointer to the string.
+ 29  */
+
+char *func_percent(__attribute__((unused)) va_list ap)
+{
+	char *ptr;
+
+	ptr = malloc(sizeof(char));
+
+	if (ptr == NULL)
+		return (NULL);
+
+ 	ptr[0] = '%';
+
+	return (ptr);
+}
