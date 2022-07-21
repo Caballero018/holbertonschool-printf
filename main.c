@@ -11,8 +11,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%", '\0');
-	len2 = printf("%", '\0');
+	len = _printf("Este es el numero %d\n", -5345);
+	len2 = printf("Este es el numero %d\n", -5345);
 	fflush(stdout);
 	printf("%d\n", len);
 	printf("%d\n", len2);

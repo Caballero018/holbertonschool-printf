@@ -15,6 +15,8 @@ char* (*get_op_func(char s))(va_list)
 		{"c", func_char},
 		{"s", func_string},
 		{"%", func_percent},
+		{"i", func_integer},
+		{"d", func_decimal},
 		{NULL, NULL},
 	};
 
