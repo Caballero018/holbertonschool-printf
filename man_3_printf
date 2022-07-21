@@ -1,0 +1,17 @@
+.\" Manpage for _printf.
+.\" Contact 4617@holbertonschool.com && 5180@holbertonschool.com to correct errors or typos.
+.TH man 8 "21 Jul 2022" "1.0" "_printf man page"
+.SH NAME
+printf
+.SH SYNOPSIS
+printf FORMAt [ARGUMENT] ...
+.SH DESCRIPTION
+printf is a function that produces output according to a format.
+.SH OPTIONS
+No hay opciones por el momento
+.SH SEE ALSO
+_printf(3)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Alejandro Caballero (4617@holbertonschool.com) & Juan David Otálora (5180@holbertonschool.com)
