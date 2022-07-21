@@ -9,14 +9,12 @@
  */
 int main(void)
 {
-    int len;
-    int len2;
-    
-    len = _printf("Should print a single percent sign: %%\n");
-    len2 = _printf("Should print a single percent sign: %%\n");
+int len, len2;
 
-    printf("%d\n", len);
-    printf("%d\n", len2);
+	len = _printf("hello world");
+	len2 = printf("hello word");
+    	printf("%d\n", len);
+   	printf("%d\n", len2);
 
     return (0);
 }

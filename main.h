@@ -15,7 +15,7 @@
 typedef struct op
 {
 	int counter;
-	char buffer[1024];
+	char buffer[2000];
 } string_to_print;
 
 /**
