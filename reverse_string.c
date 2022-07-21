@@ -14,7 +14,10 @@ char *reverse_string(char *str)
 	char *dest;
 	int i, len = strlen(str);
 
-	dest = malloc(sizeof(char) * len);
+	dest = calloc(len, sizeof(char));
+
+	if (dest == NULL)
+		return (NULL);
 
 	for (i = 0; i < len; i++)
 	{

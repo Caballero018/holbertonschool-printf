@@ -147,12 +147,13 @@ char *func_decimal(va_list ap)
 		n = n / 10;
 		nbytes++;
 	}
+
 	if (k == 0)
 		nbytes = 1;
 	if (flag == 1)
-		ptr = malloc(sizeof(char) * nbytes + 1);
+		ptr = calloc(nbytes + 1, sizeof(char));
 	else
-		ptr = malloc(sizeof(char) * nbytes);
+		ptr = calloc(nbytes, sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
@@ -161,7 +162,6 @@ char *func_decimal(va_list ap)
 		ptr[i] = '0' + labs(k) % 10;
 		k = labs(k) / 10;
 	}
-
 	if (flag == 1)
 		ptr[i] = '-';
 
