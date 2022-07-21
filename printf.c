@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		write(1, stringf.buffer, stringf.counter);
- 		return (stringf.counter);
+		return (stringf.counter);
 	}
 	return (-1);
 }
