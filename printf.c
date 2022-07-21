@@ -31,7 +31,8 @@ int _printf(const char *format, ...)
 			{
 				res = ptr(ap);
 				fill_buffer(res, &stringf);
-				free(res);
+				if (strcmp(res, "nan") != 0)
+					free(res);
 				i++;
 			}
 			else
