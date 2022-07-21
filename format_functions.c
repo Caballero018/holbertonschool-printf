@@ -147,6 +147,8 @@ char *func_decimal(va_list ap)
 		n = n / 10;
 		nbytes++;
 	}
+	if (k == 0)
+		nbytes = 1;
 	if (flag == 1)
 		ptr = malloc(sizeof(char) * nbytes + 1);
 	else

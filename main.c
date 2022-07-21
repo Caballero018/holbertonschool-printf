@@ -1,28 +1,24 @@
-#include <limits.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: 0 on success, error code otherwise
  */
 int main(void)
 {
 	int len, len2;
 
-	len = _printf("Este es el numero %d\n", -5345);
-	len2 = printf("Este es el numero %d\n", -5345);
+	len = _printf("There is %d bytes in %i KB\n", 1024, 200);
+	len2 = printf("There is %d bytes in %d KB\n", 1024, 200);
 	fflush(stdout);
-	printf("%d\n", len);
-	printf("%d\n", len2);
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");
 		fflush(stdout);
-
 		return (1);
 	}
 	return (0);
-
 }
