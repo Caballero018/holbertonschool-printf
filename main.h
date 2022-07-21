@@ -12,11 +12,11 @@
  * @buffer: The buffer to save the string.
  */
 
-typedef struct op
+struct op
 {
 	int counter;
 	char buffer[2000];
-} string_to_print;
+};
 
 /**
  * struct formats - Struct formats
@@ -36,5 +36,6 @@ char *func_char(va_list ap);
 char *func_string(va_list ap);
 char *func_percent(va_list ap);
 char *(*get_op_func(char s))(va_list);
+void fill_buffer(char *res, struct op *stringf);
 
 #endif /* PRINTF_H */

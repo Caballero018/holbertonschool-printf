@@ -14,37 +14,34 @@
  */
 int _printf(const char *format, ...)
 {
-	int len, j, i = 0;
-	char *(*ptr)(va_list);
-	char *res;
-	string_to_print stringf;
+	int i = 0;
+	char *res, *(*ptr)(va_list);
+	struct op stringf;
 	va_list ap;
 
 	va_start(ap, format);
 	stringf.counter = 0;
-
-	while (format[i] != 0)
+	if (format != NULL && !(format[0] == '%' && format[1] == 0))
 	{
-		if (format[i] == '%')
+		while (format[i] != 0)
 		{
 			ptr = get_op_func(format[i + 1]);
-			res = ptr(ap);
-			len = strlen(res);
-			for (j = 0; j < len; j++)
+			if (format[i] == '%' && ptr != NULL)
 			{
-				stringf.buffer[stringf.counter] = res[j];
+				res = ptr(ap);
+				fill_buffer(res, &stringf);
+				free(res);
+				i++;
+			}
+			else
+			{
+				stringf.buffer[stringf.counter] = format[i];
 				stringf.counter++;
 			}
-			free(res);
 			i++;
 		}
-		else
-		{
-			stringf.buffer[stringf.counter] = format[i];
-			stringf.counter++;
-		}
-		i++;
+		write(1, stringf.buffer, stringf.counter);
+ 		return (stringf.counter);
 	}
-	write(1, stringf.buffer, stringf.counter);
-	return (stringf.counter);
+	return (-1);
 }

@@ -11,6 +11,16 @@ char *func_char(va_list ap)
 	char c, *ptr;
 
 	c = va_arg(ap, int);
+
+	if (c == 0)
+	{
+		ptr = malloc(sizeof(char) * 4);
+		if (ptr == NULL)
+			return (NULL);
+		ptr = "nan";
+		return (ptr);
+	}	
+
 	ptr = malloc(sizeof(char));
 
 	if (ptr == NULL)
