@@ -1,5 +1,5 @@
 .\" Manpage for _printf.
-.\" Contact 4617@holbertonschool.com && 5180@holbertonschool.com to correct errors or typos.
+.\" Contact 4617@holbertonschool.com or 5180@holbertonschool.com to correct errors or typos.
 .TH man 8 "21 Jul 2022" "1.0" "_printf man page"
 .SH NAME
 printf
@@ -8,7 +8,21 @@ printf FORMAt [ARGUMENT] ...
 .SH DESCRIPTION
 printf is a function that produces output according to a format.
 .SH OPTIONS
-No hay opciones por el momento
+Each format specifier starts with a percent sign and ends with a letter.
+.TP
+.BR \\%%c
+.IP
+Print a single character.
+.IP
+Print a string of characters.
+.TP
+.BR \\%%d ", " \\%%i
+.IP
+Print a decimal (base 10) number.
+.TP
+.BR \%%%
+.IP
+Print a percent sign (\% also works).
 .SH SEE ALSO
 _printf(3)
 .SH BUGS
