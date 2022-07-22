@@ -14,7 +14,7 @@ char *func_char(va_list ap)
 
 	if (c == 0)
 	{
-		ptr = malloc(sizeof(char) * 4);
+		ptr = calloc(4, sizeof(char));
 		if (ptr == NULL)
 			return (NULL);
 		ptr = "nan";

@@ -42,7 +42,8 @@ int _printf(const char *format, ...)
 			}
 			i++;
 		}
-		write(1, stringf.buffer, stringf.counter);
+		if (strcmp(res, "nan") != 0)
+			write(1, stringf.buffer, stringf.counter);
 		return (stringf.counter);
 	}
 	return (-1);
