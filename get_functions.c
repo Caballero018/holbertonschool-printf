@@ -22,6 +22,7 @@ char* (*get_op_func(char s))(va_list)
 		{"o", func_octal},
 		{"x", func_hex},
 		{"X", func_HEX},
+		{"S", func_S},
 		{NULL, NULL},
 	};
 

@@ -177,3 +177,59 @@ char *func_HEX(va_list ap)
 	free(ptr);
 	return (res);
 }
+
+
+/**
+ * func_S - Expands a character specification with
+ * a String value and replace the non printable character
+ * with hexadecimal number in capital letters.
+ * @ap: The list of variadic arguments.
+ * Return: A pointer to the string.
+ */
+
+char *func_S(va_list ap)
+{
+	int i, len, j, counter;
+	char *s = NULL, *ptr = NULL, *aux = NULL;
+
+	s = va_arg(ap, char *);
+
+	if (s == NULL)
+		s = "(null)";
+
+	counter = 0;
+	j = 0;
+
+	while (s[j] != 0)
+ 	{
+  		if ((s[j]  < 32 && s[j] > 0) || s[j] >= 127)
+			counter++;
+		j++;
+	}
+
+	len = strlen(s);
+	ptr = malloc(sizeof(char) * len + (counter * 3));
+
+	if (ptr == NULL)
+		return (NULL);
+
+	counter = 0;
+	i = 0;
+  	while (s[i] != 0)
+	{
+		if ((s[i]  < 32 && s[i] > 0) || s[i] >= 127)
+		{
+			ptr[counter] = '/';
+			ptr[counter + 1] = 'x';
+			aux = int_to_hex(s[i]);
+			ptr[counter + 2] = aux[0];
+			ptr[counter + 3] = aux[1];
+			counter += 3;
+			free(aux);
+		} else
+			ptr[counter] = s[i];
+		counter++;
+		i++;
+	}
+	return (ptr);
+}
