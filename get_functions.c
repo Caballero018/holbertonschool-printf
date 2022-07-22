@@ -20,6 +20,8 @@ char* (*get_op_func(char s))(va_list)
 		{"b", func_binary},
 		{"u", func_integer},
 		{"o", func_octal},
+		{"x", func_hex},
+		{"X", func_HEX},
 		{NULL, NULL},
 	};
 
