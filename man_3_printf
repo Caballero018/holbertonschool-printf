@@ -13,6 +13,8 @@ Each format specifier starts with a percent sign and ends with a letter.
 .BR \\%%c
 .IP
 Print a single character.
+.TP
+.BR \\%%s
 .IP
 Print a string of characters.
 .TP
@@ -38,6 +40,10 @@ Print an unsigned decimal (base 10) number.
 .IP
 print a number in octal (base 8).
 
+.TP
+.BR \%%x ", " \\%%X
+.IP
+Print a number in hexidecimal (base 16)
 .SH SEE ALSO
 _printf(3)
 .SH BUGS
