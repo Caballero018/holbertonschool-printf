@@ -17,6 +17,7 @@ char* (*get_op_func(char s))(va_list)
 		{"%", func_percent},
 		{"i", func_decimal},
 		{"d", func_decimal},
+		{"b", func_binary},
 		{NULL, NULL},
 	};
 
