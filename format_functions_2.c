@@ -10,10 +10,11 @@
 
 char *func_binary(va_list ap)
 {
-	int nbytes, n, i, k;
+	int nbytes, i;
+	long n, k;
 	char *ptr, *res;
 
-	k = va_arg(ap, int);
+	k = va_arg(ap, long);
 	n = k;
 	nbytes = 0;
 
@@ -23,7 +24,10 @@ char *func_binary(va_list ap)
 		nbytes++;
 	}
 
-	ptr = malloc(sizeof(char) * nbytes);
+	if (k == 0)
+		nbytes = 1;
+
+	ptr = calloc(nbytes, sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
