@@ -48,6 +48,43 @@
 | `func_hex` | %x  |  Print a number in hexidecimal (base 16) |
 | `func_HEX` | %X   |  Print a number in hexidecimal (base 16) in capital letters |
 
+## \_printf function examples.
+
+> Example 1:
+
+```\_printf("%d\n", 100);```
+  
+  Expect output:
+  
+```100```
+> Example 2:
+
+```\_printf("%s\n", "hello world");```
+   
+   Expect output:
+   
+```hello world```
+  
+> Example 3:
+ 
+```int var = 200;```
+
+```\_printf("%i\n", var);```
+   
+   Expect output:
+   
+```200```
+   
+> Example 4:
+ 
+```char c = 's'; ```
+ 
+```\_printf("%c\n", c);```
+ 
+Expect output:
+
+```s```
+
 ## Flowchart
 
 | Main function | Get_functions | Format_functions |
