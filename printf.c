@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			if (format[i] == '%' && ptr != NULL)
 			{
 				res = ptr(ap);
-				fill_buffer(res, &stringf);
+				fill_buffer(res, &stringf, format[i + 1]);
 				free(res);
 				i++;
 			}

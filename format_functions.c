@@ -36,16 +36,16 @@ char *func_string(va_list ap)
 	char *s, *ptr;
 
 	s = va_arg(ap, char *);
+	len = strlen(s);
 
 	if (s == NULL)
 		s = "(null)";
 
-	ptr = malloc(sizeof(char) * strlen(s));
+	ptr = malloc(sizeof(char) * len);
 
 	if (ptr == NULL)
 		return (NULL);
 
-	len = strlen(s);
 	for (i = 0; i < len; i++)
 	{
 		ptr[i] = s[i];

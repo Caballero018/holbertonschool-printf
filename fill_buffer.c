@@ -10,18 +10,12 @@
  * Return: Nothing.
  */
 
-void fill_buffer(char *res, struct op *stringf)
+void fill_buffer(char *res, struct op *stringf, char c)
 {
 	int j, len = strlen(res);
 
-	if (strcmp(res, "\0")  == 0)
+	if (strcmp(res, "\0")  == 0 && c != 's')
 		len = 1;
-	
-	if (strcmp(res, "\n") == 0)
-	{
-		stringf->buffer[stringf->counter] = res[0];
-		return;
-	}
 	
 	for (j = 0; j < len; j++)
 	{
