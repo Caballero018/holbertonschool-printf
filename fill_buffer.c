@@ -14,9 +14,15 @@ void fill_buffer(char *res, struct op *stringf)
 {
 	int j, len = strlen(res);
 
-	if (strcmp(res, "\0")  == 0 || strcmp(res, "\n") == 0)
+	if (strcmp(res, "\0")  == 0)
 		len = 1;
-
+	
+	if (strcmp(res, "\n") == 0)
+	{
+		stringf->buffer[stringf->counter] = res[0];
+		return;
+	}
+	
 	for (j = 0; j < len; j++)
 	{
 		stringf->buffer[stringf->counter] = res[j];
