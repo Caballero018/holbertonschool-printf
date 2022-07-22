@@ -44,6 +44,17 @@ print a number in octal (base 8).
 .BR \%%x ", " \\%%X
 .IP
 Print a number in hexidecimal (base 16)
+
+.TP
+.BR \%%S ", " \\%%X
+.IP
+Character string (terminated in '\0')
+
+.TP
+.BR \%%p ", " \\%%X
+.IP
+Memory address (pointer)
+
 .SH SEE ALSO
 _printf(3)
 .SH BUGS
