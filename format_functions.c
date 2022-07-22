@@ -36,11 +36,11 @@ char *func_string(va_list ap)
 	char *s, *ptr;
 
 	s = va_arg(ap, char *);
-	len = strlen(s);
 
 	if (s == NULL)
 		s = "(null)";
 
+	len = strlen(s);
 	ptr = malloc(sizeof(char) * len);
 
 	if (ptr == NULL)
