@@ -31,7 +31,8 @@ int _printf(const char *format, ...)
 			{
 				res = ptr(ap);
 				fill_buffer(res, &stringf);
-				free(res);
+				if (strcmp(res, "nan") != 0)
+					free(res);
 				i++;
 			}
 			else
@@ -41,7 +42,8 @@ int _printf(const char *format, ...)
 			}
 			i++;
 		}
-		write(1, stringf.buffer, stringf.counter);
+		if (strcmp(res, "nan") != 0)
+			write(1, stringf.buffer, stringf.counter);
 		return (stringf.counter);
 	}
 	return (-1);

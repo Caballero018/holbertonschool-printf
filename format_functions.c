@@ -14,6 +14,25 @@ char *func_char(va_list ap)
 	c = va_arg(ap, int);
 
 	return (fwrite(1, &c, 1));
+=======
+	if (c == 0)
+	{
+		ptr = calloc(4, sizeof(char));
+		if (ptr == NULL)
+			return (NULL);
+		ptr = "nan";
+		return (ptr);
+	}
+
+	ptr = malloc(sizeof(char));
+
+	if (ptr == NULL)
+		return (NULL);
+
+	*ptr = c;
+
+	return (ptr);
+>>>>>>> 9b618b17c6370cbf41badd22fd44079d61011ead
 }
 
 /**
