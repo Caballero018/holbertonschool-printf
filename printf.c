@@ -44,6 +44,8 @@ int _printf(const char *format, ...)
 		}
 		if (strcmp(res, "nan") != 0)
 			write(1, stringf.buffer, stringf.counter);
+		else 
+			perror("Error: ");
 		return (stringf.counter);
 	}
 	return (-1);
