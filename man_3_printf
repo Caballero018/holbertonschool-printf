@@ -2,7 +2,7 @@
 .\" Contact 4617@holbertonschool.com or 5180@holbertonschool.com to correct errors or typos.
 .TH man 8 "21 Jul 2022" "1.0" "_printf man page"
 .SH NAME
-printf
+_printf
 .SH SYNOPSIS
 printf FORMAt [ARGUMENT] ...
 .SH DESCRIPTION
@@ -23,6 +23,21 @@ Print a decimal (base 10) number.
 .BR \%%%
 .IP
 Print a percent sign (\% also works).
+.TP
+.BR \%%b
+.IP
+The unsigned int argument is converted to binary.
+
+.TP
+.BR \%%u
+.IP
+Print an unsigned decimal (base 10) number.
+
+.TP
+.BR \%%o
+.IP
+print a number in octal (base 8).
+
 .SH SEE ALSO
 _printf(3)
 .SH BUGS
