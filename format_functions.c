@@ -83,7 +83,7 @@ char *func_percent(__attribute__((unused)) va_list ap)
  * Return: A pointer to the string.
  */
 
-char *func_integer(va_list ap)
+char *func_unsigned_integer(va_list ap)
 {
 	int nbytes, i;
 	unsigned int k, n;
