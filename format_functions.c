@@ -90,7 +90,7 @@ char *func_integer(va_list ap)
 	char *ptr, *res;
 
 	k = va_arg(ap, int);
-	
+
 	n = k;
 	nbytes = 0;
 
