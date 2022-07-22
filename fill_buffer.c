@@ -15,7 +15,7 @@ void fill_buffer(char *res, struct op *stringf, char c)
 {
 	int j, len = strlen(res);
 
-	if (strcmp(res, "\0")  == 0 && c != 's')
+	if (strcmp(res, "\0")  == 0 && c != 's' && c != 'S')
 		len = 1;
 
 	for (j = 0; j < len; j++)
