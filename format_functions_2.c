@@ -219,7 +219,7 @@ char *func_S(va_list ap)
 	{
 		if ((s[i]  < 32 && s[i] > 0) || s[i] >= 127)
 		{
-			ptr[counter] = '/';
+			ptr[counter] = '\';
 			ptr[counter + 1] = 'x';
 			aux = int_to_hex(s[i]);
 			ptr[counter + 2] = aux[0];
