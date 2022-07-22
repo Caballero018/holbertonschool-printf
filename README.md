@@ -47,6 +47,8 @@
 | `func_octal` | %o | Print a number in octal (base 8). |
 | `func_hex` | %x  |  Print a number in hexidecimal (base 16) |
 | `func_HEX` | %X   |  Print a number in hexidecimal (base 16) in capital letters |
+| `func_hex` | %S  | Character string (terminated in '\0' |
+| `func_HEX` | %p   | Memory address (pointer) |
 
 ## \_printf function examples.
 
