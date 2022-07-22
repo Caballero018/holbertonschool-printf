@@ -39,6 +39,7 @@ char *func_percent(va_list ap);
 char *func_integer(va_list ap);
 char *func_decimal(va_list ap);
 char *func_binary(va_list ap);
+char *func_octal(va_list ap);
 char *reverse_string(char *str);
 char *(*get_op_func(char s))(va_list);
 void fill_buffer(char *res, struct op *stringf);

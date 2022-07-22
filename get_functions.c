@@ -18,6 +18,8 @@ char* (*get_op_func(char s))(va_list)
 		{"i", func_decimal},
 		{"d", func_decimal},
 		{"b", func_binary},
+		{"u", func_integer},
+		{"o", func_octal},
 		{NULL, NULL},
 	};
 

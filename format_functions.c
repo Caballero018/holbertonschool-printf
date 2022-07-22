@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <math.h>
 
 /**
  * func_char - Returns a pointer to the character.
@@ -93,10 +94,12 @@ char *func_percent(__attribute__((unused)) va_list ap)
 
 char *func_integer(va_list ap)
 {
-	int nbytes, n, i, k;
+	int nbytes, i;
+	unsigned int k, n;
 	char *ptr, *res;
 
 	k = va_arg(ap, int);
+	
 	n = k;
 	nbytes = 0;
 
@@ -105,8 +108,10 @@ char *func_integer(va_list ap)
 		n = n / 10;
 		nbytes++;
 	}
+	if (k == 0)
+		nbytes = 1;
 
-	ptr = malloc(sizeof(char) * nbytes);
+	ptr = calloc(nbytes, sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
