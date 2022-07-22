@@ -15,7 +15,6 @@ char *func_binary(va_list ap)
 	char *ptr, *res;
 
 	k = va_arg(ap, long);
-	printf("%ld\n", k);
 	n = k;
 	nbytes = 0;
 
