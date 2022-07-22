@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * func_char - Returns a pointer to the character.
@@ -8,27 +9,11 @@
  */
 char *func_char(va_list ap)
 {
-	char c, *ptr;
+	char *ptr, c;
 
 	c = va_arg(ap, int);
 
-	if (c == 0)
-	{
-		ptr = malloc(sizeof(char) * 4);
-		if (ptr == NULL)
-			return (NULL);
-		ptr = "nan";
-		return (ptr);
-	}
-
-	ptr = malloc(sizeof(char));
-
-	if (ptr == NULL)
-		return (NULL);
-
-	*ptr = c;
-
-	return (ptr);
+	return (fwrite(1, &c, 1));
 }
 
 /**
