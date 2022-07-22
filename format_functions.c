@@ -11,7 +11,7 @@ char *func_char(va_list ap)
 {
 	char c, *ptr;
 
-	c = va_arg(ap, int);
+	c = va_rg(ap, int);
 
 	ptr = malloc(sizeof(char));
 
