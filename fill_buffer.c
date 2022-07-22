@@ -14,11 +14,8 @@ void fill_buffer(char *res, struct op *stringf)
 {
 	int j, len = strlen(res);
 
-	if (strcmp(res, "nan") == 0)
-	{
-		stringf->counter++;
-		return;
-	}
+	if (len == 0)
+		len = 1;
 
 	for (j = 0; j < len; j++)
 	{

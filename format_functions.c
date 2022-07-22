@@ -13,15 +13,6 @@ char *func_char(va_list ap)
 
 	c = va_arg(ap, int);
 
-	if (c == 0)
-	{
-		ptr = calloc(4, sizeof(char));
-		if (ptr == NULL)
-			return (NULL);
-		ptr = "nan";
-		return (ptr);
-	}
-
 	ptr = malloc(sizeof(char));
 
 	if (ptr == NULL)
