@@ -142,7 +142,7 @@ char *func_hex(va_list ap)
 char *func_HEX(va_list ap)
 {
 	int nbytes, i, ascii_displacement;
-	long n, k;
+	unsigned int n, k;
 	char *ptr, *res;
 
 	k = va_arg(ap, long);
