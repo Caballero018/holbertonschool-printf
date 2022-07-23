@@ -14,7 +14,7 @@ char* (*get_op_func(char s))(va_list)
 	op_t func[] = {
 		{"c", func_char},
 		{"s", func_string},
-		/*{"%", func_percent},*/
+		{"%", func_percent},
 		{"i", func_decimal},
 		{"d", func_decimal},
 		{"b", func_binary},

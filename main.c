@@ -14,7 +14,7 @@ int main(void)
 	long int l = UINT_MAX;
 
 	l += 1024;
-	len = _printf("%b", l);
+	len = _printf("%b jfdsf %% gdgdf", l);
 	len2 = printf("1111111111");
 	fflush(stdout);
 	if (len != len2)
