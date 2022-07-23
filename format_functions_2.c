@@ -202,7 +202,7 @@ char *func_S(va_list ap)
 
 	while (s[j] != 0)
  	{
-  		if ((s[j]  < 32 && s[j] > 0) || s[j] >= 127)
+  		if ((s[j] < 32 && s[j] > 0) || s[j] >= 127)
 			counter++;
 		j++;
 	}
@@ -217,7 +217,7 @@ char *func_S(va_list ap)
 	i = 0;
   	while (s[i] != 0)
 	{
-		if ((s[i]  < 32 && s[i] > 0) || s[i] >= 127)
+		if ((s[i] < 32 && s[i] > 0) || s[i] >= 127)
 		{
 			ptr[counter] = 92;
 			ptr[counter + 1] = 'x';
