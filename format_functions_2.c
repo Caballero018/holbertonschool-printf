@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 #include <string.h>
 
 /**
@@ -11,7 +11,7 @@
 char *func_binary(va_list ap)
 {
 	int nbytes, i;
-	long n, k;
+	unsigned int n, k;
 	char *ptr, *res;
 
 	k = va_arg(ap, long);

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "holberton.h"
+#include <limits.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -10,12 +11,12 @@
 int main(void)
 {
 	int len, len2;
+	long int l = UINT_MAX;
 
-	len = _printf("- What did you say?\n- %S\n- That's what I thought.\n", "");
-	len2 = printf("- What did you say?\n- %s\n- That's what I thought.\n", "");
+	l += 1024;
+	len = _printf("%b", l);
+	len2 = printf("1111111111");
 	fflush(stdout);
-	printf("%d\n", len);
-	printf("%d\n", len2);
 	if (len != len2)
 	{
 		printf("Lengths differ.\n");

@@ -1,5 +1,5 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,32 +20,5 @@ struct op
 	char buffer[2000];
 };
 
-/**
- * struct formats - Struct formats
- *
- * @format: The character that specify the format.
- * @f: The function that expands a specfic format.
- */
 
-typedef struct formats
-{
-	char *format;
-	char *(*f)(va_list ap);
-} op_t;
-
-int _printf(const char *format, ...);
-char *func_char(va_list ap);
-char *func_string(va_list ap);
-char *func_percent(va_list ap);
-char *func_unsigned_integer(va_list ap);
-char *func_decimal(va_list ap);
-char *func_binary(va_list ap);
-char *func_octal(va_list ap);
-char *func_hex(va_list ap);
-char *func_HEX(va_list ap);
-char *func_S(va_list ap);
-char *reverse_string(char *str);
-char *int_to_hex(int k);
-char *(*get_op_func(char s))(va_list);
-void fill_buffer(char *res, struct op *stringf, char c);
-#endif /* PRINTF_H */
+#endif /* HOLBERTON_H */
