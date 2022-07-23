@@ -1,5 +1,5 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -49,4 +49,4 @@ char *reverse_string(char *str);
 char *int_to_hex(int k);
 char *(*get_op_func(char s))(va_list);
 void fill_buffer(char *res, struct op *stringf, char c);
-#endif /* PRINTF_H */
+#endif /* _MAIN_H_ */
