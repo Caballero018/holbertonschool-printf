@@ -196,26 +196,22 @@ char *func_S(va_list ap)
 
 	if (s == NULL)
 		s = "(null)";
-
-	counter = 0;
-	j = 0;
+	counter = j = 0;
 
 	while (s[j] != 0)
- 	{
-  		if ((s[j] < 32 && s[j] > 0) || s[j] >= 127)
+	{
+		if ((s[j] < 32 && s[j] > 0) || s[j] >= 127)
 			counter++;
 		j++;
 	}
 
 	len = strlen(s);
 	ptr = malloc(sizeof(char) * len + (counter * 3));
-
 	if (ptr == NULL)
 		return (NULL);
-
 	counter = 0;
 	i = 0;
-  	while (s[i] != 0)
+	while (s[i] != 0)
 	{
 		if ((s[i] < 32 && s[i] > 0) || s[i] >= 127)
 		{
