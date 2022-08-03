@@ -76,7 +76,7 @@ char *func_percent(__attribute__((unused)) va_list ap)
 }
 
 /**
- * func_integer - Expands a character specification with
+ * func_unsigned_integer - Expands a character specification with
  * a integer value.
  * @ap: The list of variadic arguments.
  * Return: A pointer to the string.
